@@ -1,0 +1,26 @@
+package com.example.request;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+
+import javax.validation.constraints.Min;
+
+@Data
+@ApiModel
+/**
+ * hibernate valid 做字段校验
+ */
+public class CartItemRequest {
+
+    @ApiModelProperty(value = "商品id",example = "11")
+    @JsonProperty("product_id")
+    private long productId;
+
+    @ApiModelProperty(value = "购买数量",example = "1")
+    @JsonProperty("buy_num")
+    @Min(1)
+    private int buyNum;
+
+}
