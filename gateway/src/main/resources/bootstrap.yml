@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    nacos:
+      config:
+        server-addr: 101.43.84.219:8848 #Nacos配置中心地址
+        file-extension: yaml #文件拓展格式
+
+  profiles:
+    active: dev
